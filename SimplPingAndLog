@@ -1,9 +1,4 @@
-$ip = ""; 
-$s = "1";
-$ip = Read-Host "Please enter url eg. facebook.com or IP address"; 
-$s = Read-Host "Enter ping frequency in seconds";
-do {
-  $ping = test-connection -comp $ip -Quiet;
-  Write-Host "$(Get-Date) $ip is down" -ForegroundColor Red; 
-  sleep $s} 
+$ip = ""; $d = "5";
+$ip = Read-Host "Please enter url eg. facebook.com or IP address"; $d = Read-Host "Enter ping frequency in seconds";
+do {$ping = test-connection -comp $ip -Delay $d -Quiet;  Write-Host "$(Get-Date) $ip is down" -ForegroundColor Red} 
 until ($ping) Write-Host "$(Get-Date) $ip is up" -ForegroundColor Green;
