@@ -1,4 +1,4 @@
 $ip = "";
-$ip = Read-Host "Please enter website www. link or IP address";
+$ip = Read-Host "Please enter url eg. facebook.com or IP address";
 do {$ping = test-connection -comp $ip -Quiet;
   Write-Host "$(Get-Date) $ip is down" -ForegroundColor Red} until ($ping) Write-Host "$(Get-Date) $ip is up" -ForegroundColor Green;
