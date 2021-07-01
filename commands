@@ -1,0 +1,9 @@
+net users
+whoami
+systeminfo | more
+driverquery
+telnet towel.blinkenlights.nl
+sfc /scannow
+netsh wlan show profile BSSID key=clear
+powercfg /batteryreport
+wmic path softwarelicensingservice get OA3xOriginalProductKey
